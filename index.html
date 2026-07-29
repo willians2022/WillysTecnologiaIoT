@@ -12,6 +12,26 @@
 <meta property="og:site_name" content="Willys Tecnologia IoT">
 <meta property="og:title" content="Willys Tecnologia IoT - Automação e Eletrônica">
 <meta property="og:description" content="Projetos IoT, Arduino, ESP32, automação industrial e eletrônica.">
+ <style>
+
+.slide {
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    background-size:cover;
+    background-position:center;
+    opacity:0;
+    transform:scale(1);
+    transition:opacity 1.5s ease-in-out, transform 8s;
+}
+
+.slide.active {
+    opacity:1;
+    transform:scale(1.08);
+}
+
+</style>
 </head>
 
 <body class="bg-slate-950 text-white">
@@ -38,7 +58,81 @@
 </div>
 </nav>
 
-<section id="inicio" class="min-h-screen flex items-center justify-center text-center px-6 pt-20">
+<section id="inicio" 
+class="min-h-screen flex items-center justify-center text-center px-6 pt-20 relative overflow-hidden">
+
+
+<!-- SLIDESHOW -->
+<div class="absolute inset-0">
+
+
+<div class="slide active"
+style="background-image:url('imagem/esp32.jpg');">
+</div>
+
+
+<div class="slide"
+style="background-image:url('imagem/placa.jpg');">
+</div>
+
+
+<div class="slide"
+style="background-image:url('imagem/ferrodesolda.jpg');">
+</div>
+
+
+<div class="slide"
+style="background-image:url('imagem/chip.jpg');">
+</div>
+
+
+<div class="slide"
+style="background-image:url('imagem/conserto-placas-eletronicas-03.webp');">
+</div>
+
+
+<!-- camada escura -->
+<div class="absolute inset-0 bg-slate-950/75"></div>
+
+
+</div>
+
+
+
+<!-- TEXTO -->
+<div class="relative z-10">
+
+<h2 class="text-4xl sm:text-5xl md:text-7xl font-bold">
+
+Willys Tecnologia IoT <br>
+
+<span class="text-blue-500">
+Automação, Eletrônica & Inovação
+</span>
+
+</h2>
+
+
+<p class="mt-6 text-slate-300 max-w-2xl mx-auto">
+
+Projetos IoT, Arduino, ESP32, automação industrial,
+reparo de placas eletrônicas e soluções inteligentes.
+
+</p>
+
+
+<a class="inline-block mt-8 bg-blue-600 hover:bg-blue-500 px-8 py-4 rounded-full transition"
+
+href="https://wa.me/5511966667428">
+
+Pedir orçamento
+
+</a>
+
+
+</div>
+
+</section>
 <div>
 <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold">
 Willys Tecnologia IoT <br>
@@ -128,9 +222,41 @@ class="fixed bottom-5 right-5 bg-green-500 w-14 h-14 rounded-full flex items-cen
 
 <script>
 document.getElementById("btn").onclick=function(){
+
 document.getElementById("mobile").classList.toggle("hidden");
+
 }
-  
+
+
+
+// SLIDESHOW
+
+let slideAtual = 0;
+
+const slides = document.querySelectorAll(".slide");
+
+
+function trocarSlide(){
+
+slides[slideAtual].classList.remove("active");
+
+
+slideAtual++;
+
+
+if(slideAtual >= slides.length){
+
+slideAtual = 0;
+
+}
+
+
+slides[slideAtual].classList.add("active");
+
+}
+
+
+setInterval(trocarSlide,6000);
 </script>
 
 </body>
