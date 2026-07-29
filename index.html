@@ -212,3 +212,286 @@ Pedir orçamento
 
 
 </section>
+
+  <!-- SERVIÇOS -->
+
+<section id="servicos" class="py-20 px-6">
+
+<div class="max-w-7xl mx-auto">
+
+
+<h2 class="text-4xl font-bold text-center mb-12">
+
+Nossos <span class="text-blue-500">Serviços</span>
+
+</h2>
+
+
+<div class="grid md:grid-cols-3 gap-6">
+
+
+
+<div class="bg-slate-900 p-8 rounded-3xl hover:scale-105 transition">
+
+<i class="fas fa-microchip text-blue-400 text-3xl"></i>
+
+<h3 class="text-xl font-bold mt-4">
+
+Reparação Eletrônica
+
+</h3>
+
+<p class="text-slate-400 mt-3">
+
+Diagnóstico de placas, microsoldagem,
+componentes SMD e manutenção eletrônica.
+
+</p>
+
+</div>
+
+
+
+
+<div class="bg-slate-900 p-8 rounded-3xl hover:scale-105 transition">
+
+<i class="fas fa-laptop text-cyan-400 text-3xl"></i>
+
+<h3 class="text-xl font-bold mt-4">
+
+Manutenção Técnica
+
+</h3>
+
+<p class="text-slate-400 mt-3">
+
+Computadores, equipamentos eletrônicos
+e recuperação de sistemas.
+
+</p>
+
+</div>
+
+
+
+
+<div class="bg-slate-900 p-8 rounded-3xl hover:scale-105 transition">
+
+<i class="fas fa-wifi text-purple-400 text-3xl"></i>
+
+<h3 class="text-xl font-bold mt-4">
+
+Projetos IoT
+
+</h3>
+
+<p class="text-slate-400 mt-3">
+
+Arduino, ESP32, sensores, automação
+e sistemas inteligentes.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- CONTATO -->
+
+<section id="contacto" class="py-20 px-6 text-center">
+
+
+<h2 class="text-4xl font-bold">
+
+Entre em <span class="text-blue-500">Contato</span>
+
+</h2>
+
+
+<p class="mt-5 text-slate-300">
+
+WhatsApp: +55 11 96666-7428
+
+</p>
+
+
+<a href="https://wa.me/5511966667428"
+class="inline-block mt-8 bg-green-600 px-8 py-4 rounded-full">
+
+Conversar no WhatsApp
+
+</a>
+
+
+</section>
+
+
+
+
+
+<!-- BOTÃO WHATSAPP FIXO -->
+
+
+<a href="https://wa.me/5511966667428"
+
+target="_blank"
+
+class="fixed bottom-5 right-5 bg-green-500 w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+
+
+
+
+<!-- REDES SOCIAIS -->
+
+
+<div class="flex flex-wrap justify-center gap-4 py-10">
+
+
+
+<!-- YouTube -->
+
+<a href="https://www.youtube.com/@WillysTecnologiaIoT"
+
+target="_blank"
+
+class="w-12 h-12 rounded-full bg-slate-900 flex items-center justify-center hover:bg-red-600 transition">
+
+<i class="fab fa-youtube text-xl"></i>
+
+</a>
+
+
+
+
+<!-- LinkedIn -->
+
+<a href="https://www.linkedin.com/in/willianstcarvalho/"
+
+target="_blank"
+
+class="w-12 h-12 rounded-full bg-slate-900 flex items-center justify-center hover:bg-blue-600 transition">
+
+<i class="fab fa-linkedin-in text-xl"></i>
+
+</a>
+
+
+
+
+<!-- WhatsApp -->
+
+<a href="https://wa.me/5511966667428"
+
+target="_blank"
+
+class="w-12 h-12 rounded-full bg-slate-900 flex items-center justify-center hover:bg-green-600 transition">
+
+<i class="fab fa-whatsapp text-xl"></i>
+
+</a>
+
+
+
+
+<!-- GitHub -->
+
+<a href="https://github.com/willians2022"
+
+target="_blank"
+
+class="w-12 h-12 rounded-full bg-slate-900 flex items-center justify-center hover:bg-gray-600 transition">
+
+<i class="fab fa-github text-xl"></i>
+
+</a>
+
+
+
+</div>
+
+
+
+
+
+<footer class="border-t border-white/10 py-6 text-center text-slate-400">
+
+© 2026 Willys Tecnologia IoT - Todos os direitos reservados
+
+</footer>
+
+
+
+
+
+
+<script>
+
+
+// MENU CELULAR
+
+document.getElementById("btn").onclick=function(){
+
+document.getElementById("mobile").classList.toggle("hidden");
+
+}
+
+
+
+
+
+// SLIDESHOW
+
+let slideAtual = 0;
+
+
+const slides = document.querySelectorAll(".slide");
+
+
+
+function trocarSlide(){
+
+
+slides[slideAtual].classList.remove("active");
+
+
+slideAtual++;
+
+
+if(slideAtual >= slides.length){
+
+slideAtual = 0;
+
+}
+
+
+slides[slideAtual].classList.add("active");
+
+
+}
+
+
+
+setInterval(trocarSlide,6000);
+
+
+
+</script>
+
+
+</body>
+
+</html>
