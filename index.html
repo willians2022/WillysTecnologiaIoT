@@ -1,20 +1,24 @@
-from pathlib import Path
+
 
 html = r'''<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<meta name="description" content="Willys Tecnologia IoT - Projetos de automação, eletrônica, Arduino, ESP32, manutenção de placas eletrônicas e soluções inteligentes.">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Willys Tech | Eletrónica e Reparações</title>
+<title>Willys Tecnologia IoT | Automação, Eletrônica e Soluções Inteligentes</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<meta property="og:site_name" content="Willys Tecnologia IoT">
+<meta property="og:title" content="Willys Tecnologia IoT - Automação e Eletrônica">
+<meta property="og:description" content="Projetos IoT, Arduino, ESP32, automação industrial e eletrônica.">
 </head>
 
 <body class="bg-slate-950 text-white">
 
 <nav class="fixed w-full z-50 bg-slate-950/90 backdrop-blur p-4">
 <div class="max-w-7xl mx-auto flex justify-between items-center">
-<h1 class="text-2xl font-bold">Willys<span class="text-blue-500">Tech</span></h1>
+<h1 class="text-2xl font-bold">Willys<span class="text-blue-500">Tecnologia</span></h1>
 
 <button id="btn" class="md:hidden text-2xl">
 <i class="fas fa-bars"></i>
@@ -37,7 +41,8 @@ html = r'''<!DOCTYPE html>
 <section id="inicio" class="min-h-screen flex items-center justify-center text-center px-6 pt-20">
 <div>
 <h2 class="text-4xl sm:text-5xl md:text-7xl font-bold">
-Engenharia de <span class="text-blue-500">Precisão & Eletrónica</span>
+Willys Tecnologia IoT <br>
+<span class="text-blue-500">Automação, Eletrônica & Inovação</span>
 </h2>
 <p class="mt-6 text-slate-300 max-w-2xl mx-auto">
 Diagnóstico, reparação eletrónica, IoT e manutenção técnica.
@@ -70,6 +75,44 @@ Pedir orçamento
 <p class="text-slate-400">Automação e sistemas inteligentes.</p>
 </div>
 </div>
+  <div class="flex flex-wrap justify-center gap-4">
+
+    <!-- YouTube -->
+    <a href="https://www.youtube.com/@WillysTecnologiaIoT"
+    target="_blank"
+    class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-slate-400 hover:bg-red-600 hover:text-white transition-all"
+    title="YouTube Willys Tecnologia IoT">
+        <i class="fab fa-youtube"></i>
+    </a>
+
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/willianstcarvalho/"
+    target="_blank"
+    class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition-all"
+    title="LinkedIn Willys Tecnologia">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/5511966667428"
+    target="_blank"
+    class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-slate-400 hover:bg-green-600 hover:text-white transition-all"
+    title="WhatsApp Willys Tecnologia">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+
+    <!-- GitHub -->
+    <a href="https://github.com/willians2022"
+    target="_blank"
+    class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-slate-400 hover:bg-gray-600 hover:text-white transition-all"
+    title="GitHub Willys Tecnologia IoT">
+        <i class="fab fa-github"></i>
+    </a>
+
+</div>
 </section>
 
 <section id="contacto" class="py-20 px-6 text-center">
@@ -86,6 +129,7 @@ class="fixed bottom-5 right-5 bg-green-500 w-14 h-14 rounded-full flex items-cen
 document.getElementById("btn").onclick=function(){
 document.getElementById("mobile").classList.toggle("hidden");
 }
+  
 </script>
 
 </body>
@@ -93,6 +137,3 @@ document.getElementById("mobile").classList.toggle("hidden");
 
 path = Path("/mnt/data/index_willys_tech_responsivo.html")
 path.write_text(html, encoding="utf-8")
-
-str(path)
-lo
